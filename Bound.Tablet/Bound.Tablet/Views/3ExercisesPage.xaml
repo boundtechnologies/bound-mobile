@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Bound.Tablet.ViewModels;assembly=Bound.Tablet"
+             x:Class="Bound.Tablet.Views.ExercisesPage" BackgroundImageSource="Bound1.png">
+
+    <ContentPage.BindingContext>
+        <viewModels:ExercisesPageViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="BackStandingDown"
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButton_Clicked"
+                     WidthRequest="100" 
+                     HeightRequest="100"  
+                     Grid.Row="1" 
+                     BackgroundColor="Transparent"
+                     x:Name="test" />
+
+                <ImageButton Source="ShouldersOverHead" 
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButton_Clicked"
+                     WidthRequest="100" 
+                     HeightRequest="100"  
+                     Grid.Row="1" 
+                     BackgroundColor="Transparent"
+                     x:Name="test1"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="ShouldersStandingUp" 
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButton_Clicked"
+                     WidthRequest="100" 
+                     HeightRequest="100"  
+                     Grid.Row="1" 
+                     BackgroundColor="Transparent"/>
+
+                <ImageButton Source="ChestLayUp" 
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButton_Clicked"
+                     WidthRequest="100" 
+                     HeightRequest="100"  
+                     Grid.Row="1" 
+                     BackgroundColor="Transparent"/>
+            </StackLayout>
+        </StackLayout>
+        <ImageButton Source="backbutton" Grid.Row="1"
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButtonBack_Clicked"
+                     WidthRequest="50"
+                     BackgroundColor="Transparent"/>
+
+    </Grid>
+</ContentPage>

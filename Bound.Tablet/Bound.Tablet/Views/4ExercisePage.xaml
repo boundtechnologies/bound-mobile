@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Bound.Tablet.ViewModels;assembly=Bound.Tablet"
+             x:Class="Bound.Tablet.Views.ExercisePage" BackgroundImageSource="Bound1.png">
+
+    <ContentPage.BindingContext>
+        <viewModels:ExercisesPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical">
+
+            <Label x:Name="LabelTitle" HorizontalTextAlignment="Center" TextColor="Yellow"/>
+            <Button Grid.Row="1" Text="Start" x:Name="ButtonStart" Clicked="ButtonStart_Clicked"/>
+            <Button Grid.Row="2" Text="Stop" x:Name="ButtonStop" Clicked="ButtonStop_Clicked"/>
+
+
+        </StackLayout>
+        <ImageButton Source="backbutton" Grid.Row="1"
+                     HorizontalOptions="CenterAndExpand"  
+                     Clicked="ImageButtonBack_Clicked"
+                     WidthRequest="50"
+                     BackgroundColor="Transparent"/>
+
+    </Grid>
+
+</ContentPage>
